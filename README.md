@@ -1,32 +1,48 @@
-# Casey Parker · Portfolio
+# Casey Parker · Portfolio Platform
 
-A responsive single-page portfolio for a multidisciplinary product designer and frontend engineer.
+A full-stack portfolio platform showcasing a multidisciplinary product designer and frontend engineer. The repository follows the
+monorepo structure outlined in `PLAN.md`, providing a Vue 3 + Vite frontend, an Axum-based Rust API, and MongoDB persistence.
 
-## Features
+## Architecture
 
-- Hero, about, skills, projects, experience, testimonials, and contact sections
-- Dark/light theme toggle with system preference detection and persistence
-- Responsive navigation with smooth scrolling and mobile menu
-- Project filtering by vertical (SaaS, nonprofit, consumer)
-- Intersection-based reveal animations for content cards
-
-## Getting started
-
-This project is a static site—no build tooling required.
-
-```bash
-# open the `index.html` file in your browser
-open index.html
+```
+portfolio/
+├─ backend/          # Axum API with MongoDB integration
+├─ frontend/         # Vue 3 + TypeScript SPA with PWA support
+├─ infra/nginx/      # Reverse proxy example configuration
+├─ shared/models/    # TypeScript interfaces shared across services
+├─ docker-compose.yml
+└─ PLAN.md
 ```
 
-On Windows, use `start index.html`; on Linux, use `xdg-open index.html`.
+### Backend
+- Axum router with health and `/api/portfolio` endpoints
+- MongoDB driver integration with configurable connection URI
+- Structured logging with `tracing`
+- Integration test scaffold using `reqwest`
 
-## Customization
+### Frontend
+- Vite + Vue 3 + TypeScript application shell
+- Tailwind CSS utility styling
+- Pinia store for portfolio projects and filter metadata
+- Axios service layer and composables for API integration
+- PWA support via `vite-plugin-pwa`
 
-All copy and styling is intentionally organized:
+### Docker & Development
 
-- Update content directly in [`index.html`](./index.html)
-- Adjust the design in [`styles/main.css`](./styles/main.css)
-- Modify interactions in [`scripts/main.js`](./scripts/main.js)
+```bash
+# copy and configure environment variables
+cp .env.example .env
+cp backend/.env.example backend/.env
+cp frontend/.env.example frontend/.env
 
-Enjoy building!
+# run services
+docker compose up --build
+```
+
+When running locally without Docker, ensure MongoDB is available and the backend `.env` matches your environment.
+
+## Tests
+
+- `cargo test` within `backend/`
+- `npm run test` (when configured) within `frontend/`
