@@ -1,6 +1,8 @@
 /node_modules
-/frontend/node_modules
-/backend/target
+/.next
+/out
+legacy/frontend/node_modules
+legacy/backend/target
 /dist
 .env
 /frontend/.env

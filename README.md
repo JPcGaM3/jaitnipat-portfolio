@@ -1,48 +1,46 @@
 # Casey Parker · Portfolio Platform
 
-A full-stack portfolio platform showcasing a multidisciplinary product designer and frontend engineer. The repository follows the
-monorepo structure outlined in `PLAN.md`, providing a Vue 3 + Vite frontend, an Axum-based Rust API, and MongoDB persistence.
+A modern single-page portfolio built with Next.js 15, React Server Components, and Tailwind CSS. The site mirrors the original
+visual system while running entirely from the repository root. Previous Vue + Axum services now live under `legacy/` for refer
+ence.
 
 ## Architecture
 
 ```
 portfolio/
-├─ backend/          # Axum API with MongoDB integration
-├─ frontend/         # Vue 3 + TypeScript SPA with PWA support
-├─ infra/nginx/      # Reverse proxy example configuration
-├─ shared/models/    # TypeScript interfaces shared across services
+├─ app/                 # App Router pages and UI components
+├─ public/              # Static assets
+├─ legacy/              # Archived backend/frontend/shared stacks
+├─ infra/               # Existing infrastructure references
 ├─ docker-compose.yml
-└─ PLAN.md
+├─ PLAN.md
+└─ README.md
 ```
-
-### Backend
-- Axum router with health and `/api/portfolio` endpoints
-- MongoDB driver integration with configurable connection URI
-- Structured logging with `tracing`
-- Integration test scaffold using `reqwest`
 
 ### Frontend
-- Vite + Vue 3 + TypeScript application shell
-- Tailwind CSS utility styling
-- Pinia store for portfolio projects and filter metadata
-- Axios service layer and composables for API integration
-- PWA support via `vite-plugin-pwa`
+- Next.js App Router with TypeScript and strict ESLint rules
+- Tailwind CSS with a dark-first design token system
+- Recreated layout primitives (`SiteHeader`, `LayoutShell`, `ThemeToggle`)
+- Hero, project filters/cards, experience timeline, and contact CTA rebuilt as server/client components
+- Theme persistence via `localStorage` to match the prior Vue experience
 
-### Docker & Development
+### Legacy Services
+The previous Axum backend, Vue 3 frontend, and shared contracts are preserved in `legacy/`. They are no longer part of the act
+ive build but remain available for reference or migration work.
+
+## Development
 
 ```bash
-# copy and configure environment variables
-cp .env.example .env
-cp backend/.env.example backend/.env
-cp frontend/.env.example frontend/.env
+# install dependencies
+npm install
 
-# run services
-docker compose up --build
+# run the development server
+npm run dev
+
+# build and lint
+npm run build
+npm run lint
 ```
 
-When running locally without Docker, ensure MongoDB is available and the backend `.env` matches your environment.
-
-## Tests
-
-- `cargo test` within `backend/`
-- `npm run test` (when configured) within `frontend/`
+The commands above require network access to install npm packages. If your environment cannot reach the npm registry, mirror th
+e packages or run within a network that can.
