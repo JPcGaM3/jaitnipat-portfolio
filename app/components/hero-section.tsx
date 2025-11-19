@@ -24,7 +24,7 @@ export default function HeroSection() {
               scroll
               className="rounded-full border border-slate-700 px-5 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-slate-200"
             >
-              Let's collaborate
+              Let&rsquo;s collaborate
             </Link>
           </div>
         </div>
