@@ -4,8 +4,8 @@ export default function ContactSection() {
       <div className="mx-auto flex max-w-4xl flex-col gap-8 px-6 text-slate-200 md:flex-row md:items-center">
         <div className="space-y-4 md:w-2/3">
           <p className="text-sm uppercase tracking-[0.3em] text-indigo-300">Contact</p>
-          <h2 className="text-3xl font-semibold text-white">Let's build the next chapter together.</h2>
-          <p>Share a bit about your product, team, and timeline. I'll respond within two business days with next steps.</p>
+          <h2 className="text-3xl font-semibold text-white">Let&rsquo;s build the next chapter together.</h2>
+          <p>Share a bit about your product, team, and timeline. I&rsquo;ll respond within two business days with next steps.</p>
         </div>
         <div className="flex-1 space-y-3 text-sm">
           <a href="mailto:hello@example.com" className="block font-semibold text-indigo-300">
