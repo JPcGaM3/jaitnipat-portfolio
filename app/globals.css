@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-slate-950 text-slate-100 font-sans antialiased;
+}
+
+a {
+  @apply text-indigo-300 transition-colors duration-200;
+}
+
+a:hover {
+  @apply text-indigo-200;
+}
+
+section {
+  scroll-margin-top: 5rem;
+}
