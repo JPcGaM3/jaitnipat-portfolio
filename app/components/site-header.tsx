@@ -2,9 +2,9 @@ import Link from 'next/link';
 import ThemeToggle from './theme-toggle';
 
 const navigation = [
-  { href: '#projects', label: 'Projects' },
   { href: '#experience', label: 'Experience' },
-  { href: '#contact', label: 'Contact' }
+    { href: '#projects', label: 'Projects' },
+    { href: '#contact', label: 'Contact' }
 ];
 
 export default function SiteHeader() {
