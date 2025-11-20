@@ -1,8 +1,31 @@
+export type Profile = {
+  name: string;
+  title: string;
+  location: string;
+  summary: string;
+  highlights: string[];
+  photo: string;
+};
+
+export const profile: Profile = {
+  name: 'Jaitnipat Wichitniti',
+  title: 'Computer Engineering Student & Full-stack Developer',
+  location: 'Bangkok, Thailand',
+  summary:
+    'I enjoy building fast, intuitive web experiences and pairing them with reliable backend services that can scale.',
+  highlights: [
+    'Comfortable across the JavaScript/TypeScript stack with React, Next.js, and Node.js.',
+    'Hands-on with RESTful APIs, authentication, and database design for real-world projects.',
+    'Curious about cloud deployments, CI/CD, and automation to ship confidently.'
+  ],
+  photo: '/profile.svg'
+};
+
 export type Project = {
   id: string;
   name: string;
   description: string;
-  vertical: 'saas' | 'consumer' | 'nonprofit';
+  vertical: 'web' | 'backend' | 'iot';
   year: number;
   tags: string[];
   caseStudyUrl?: string;
@@ -10,31 +33,31 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: 'atlas-analytics',
-    name: 'Atlas Analytics Platform',
-    description: 'Redesigned analytics platform with activation-focused onboarding.',
-    vertical: 'saas',
+    id: 'portfolio-refresh',
+    name: 'Personal Portfolio v2',
+    description: 'Next.js portfolio with dark-theme UI, project filters, and contact routing.',
+    vertical: 'web',
+    year: 2025,
+    tags: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+    caseStudyUrl: '#contact'
+  },
+  {
+    id: 'taskflow-api',
+    name: 'TaskFlow API',
+    description: 'Node.js and Express backend for a kanban-style task manager with JWT auth.',
+    vertical: 'backend',
     year: 2024,
-    tags: ['Design systems', 'Onboarding', 'Data visualization'],
-    caseStudyUrl: '#'
+    tags: ['Express', 'PostgreSQL', 'Authentication'],
+    caseStudyUrl: '#contact'
   },
   {
-    id: 'wanderly',
-    name: 'Wanderly Travel Companion',
-    description: 'Shaped the product vision and prototypes for an award-winning travel companion.',
-    vertical: 'consumer',
+    id: 'smart-garden',
+    name: 'Smart Garden Monitor',
+    description: 'Arduino-powered sensor network with a web dashboard for soil and humidity alerts.',
+    vertical: 'iot',
     year: 2023,
-    tags: ['Motion design', 'Prototyping', 'Brand system'],
-    caseStudyUrl: '#'
-  },
-  {
-    id: 'neighborly',
-    name: 'Neighborly Mutual Aid',
-    description: 'Launched a multilingual platform connecting volunteers with urgent community needs.',
-    vertical: 'nonprofit',
-    year: 2022,
-    tags: ['Accessibility', 'Localization', 'Service design'],
-    caseStudyUrl: '#'
+    tags: ['IoT', 'Dashboard', 'Real-time data'],
+    caseStudyUrl: '#contact'
   }
 ];
 
@@ -48,19 +71,47 @@ export type Experience = {
 
 export const experiences: Experience[] = [
   {
-    id: 'alloy',
-    dates: '2022 — Present',
-    role: 'Principal Product Designer',
-    organization: 'Alloy',
+    id: 'internship',
+    dates: '2024 — Present',
+    role: 'Full-stack Developer Intern',
+    organization: 'Local product team',
     summary:
-      'Leading design system strategy across squads, aligning designers and engineers on inclusive, scalable foundations.'
+      'Built internal dashboards with Next.js and connected them to RESTful APIs, improving visibility for operations.'
   },
   {
-    id: 'brightside',
-    dates: '2019 — 2022',
-    role: 'Senior Product Designer',
-    organization: 'Brightside',
+    id: 'capstone',
+    dates: '2023 — 2024',
+    role: 'Capstone Lead · Computer Engineering',
+    organization: 'Senior Project',
     summary:
-      'Shaped financial wellness journeys that lifted engagement by 50% through behavioral insight and iterative delivery.'
+      'Led a team to design and ship an IoT monitoring system, including firmware, data pipelines, and the user-facing UI.'
+  },
+  {
+    id: 'club',
+    dates: '2022 — 2023',
+    role: 'Developer · Programming Club',
+    organization: 'University',
+    summary:
+      'Organized coding workshops, mentored peers on Git workflows, and maintained shared template projects.'
+  }
+];
+
+export type Skill = {
+  category: string;
+  items: string[];
+};
+
+export const skills: Skill[] = [
+  {
+    category: 'Languages & Frameworks',
+    items: ['JavaScript', 'TypeScript', 'React', 'Next.js']
+  },
+  {
+    category: 'Backend & Databases',
+    items: ['Node.js', 'Express', 'PostgreSQL', 'MongoDB']
+  },
+  {
+    category: 'Tools',
+    items: ['Git', 'Docker', 'Postman', 'Figma']
   }
 ];
