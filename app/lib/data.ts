@@ -84,56 +84,62 @@ export const projects: Project[] = [
 ];
 
 export type Experience = {
-  id: string;
-  dates: string;
-  role: string;
-  organization: string;
-  summary: string;
+    id: string;
+    dates: string;
+    role: string;
+    organization: string;
+    summary: string;
 };
 
 export const experiences: Experience[] = [
-  {
-    id: 'internship',
-    dates: '2024 — Present',
-    role: 'Full-stack Developer Intern',
-    organization: 'Local product team',
-    summary:
-      'Built internal dashboards with Next.js and connected them to RESTful APIs, improving visibility for operations.'
-  },
-  {
-    id: 'capstone',
-    dates: '2023 — 2024',
-    role: 'Capstone Lead · Computer Engineering',
-    organization: 'Senior Project',
-    summary:
-      'Led a team to design and ship an IoT monitoring system, including firmware, data pipelines, and the user-facing UI.'
-  },
-  {
-    id: 'club',
-    dates: '2022 — 2023',
-    role: 'Developer · Programming Club',
-    organization: 'University',
-    summary:
-      'Organized coding workshops, mentored peers on Git workflows, and maintained shared template projects.'
-  }
+    {
+        id: 'internship',
+        dates: '2024 — Present',
+        role: 'Full-stack Developer Intern',
+        organization: 'Local product team',
+        summary:
+            'Built internal dashboards with Next.js and connected them to RESTful APIs, improving visibility for operations.'
+    },
+    {
+        id: 'capstone',
+        dates: '2023 — 2024',
+        role: 'Capstone Lead · Computer Engineering',
+        organization: 'Senior Project',
+        summary:
+            'Led a team to design and ship an IoT monitoring system, including firmware, data pipelines, and the user-facing UI.'
+    },
+    {
+        id: 'club',
+        dates: '2022 — 2023',
+        role: 'Developer · Programming Club',
+        organization: 'University',
+        summary:
+            'Organized coding workshops, mentored peers on Git workflows, and maintained shared template projects.'
+    }
 ];
 
 export type Skill = {
-  category: string;
-  items: string[];
+    category: string;
+    items: string[];
 };
 
 export const skills: Skill[] = [
-  {
-    category: 'Languages & Frameworks',
-    items: ['JavaScript', 'TypeScript', 'React', 'Next.js']
-  },
-  {
-    category: 'Backend & Databases',
-    items: ['Node.js', 'Express', 'PostgreSQL', 'MongoDB']
-  },
-  {
-    category: 'Tools',
-    items: ['Git', 'Docker', 'Postman', 'Figma']
-  }
+    {
+        category: 'Languages & Frameworks',
+        items: ['JavaScript', 'TypeScript', 'React', 'Next.js']
+    },
+    {
+        category: 'Backend',
+        items: ['GoFiber', 'Echo', 'Node.js', 'Express']
+    }, {
+        category: 'Databases',
+        items: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis']
+    },
+    {
+        category: 'DevOps',
+        items: ['Git', 'Docker', 'Kubernetes', 'terraform', 'Postman', 'Figma']
+    }, {
+        category: 'Tools',
+        items: ['Postman', 'Figma']
+    }
 ];

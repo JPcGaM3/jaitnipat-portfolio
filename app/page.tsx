@@ -6,13 +6,13 @@ import ProjectsSection from './components/projects-section';
 import SkillsSection from './components/skills-section';
 
 export default function HomePage() {
-  return (
-    <LayoutShell>
-      <HeroSection />
-      <SkillsSection />
-      <ProjectsSection />
-      <ExperienceSection />
-      <ContactSection />
-    </LayoutShell>
-  );
+    return (
+        <LayoutShell>
+            <HeroSection/>
+            <ExperienceSection/>
+            <ProjectsSection/>
+            <SkillsSection/>
+            <ContactSection/>
+        </LayoutShell>
+    );
 }
