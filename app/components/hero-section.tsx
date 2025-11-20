@@ -1,46 +1,30 @@
-import Link from 'next/link';
+import Image from 'next/image';
+import { profile } from '../lib/data';
 
 export default function HeroSection() {
   return (
-    <section className="border-b border-slate-800 bg-gradient-to-b from-slate-900/60 to-slate-950 py-20">
+    <section
+      id="about"
+      className="border-b border-slate-800 bg-gradient-to-b from-slate-900/60 to-slate-950 py-20"
+      aria-labelledby="about-heading"
+    >
       <div className="mx-auto flex max-w-5xl flex-col gap-10 px-6 md:flex-row md:items-center">
-        <div className="space-y-6 md:w-2/3">
-          <p className="text-sm uppercase tracking-[0.3em] text-indigo-300">Product Designer · Frontend Engineer</p>
-          <h1 className="text-4xl font-semibold leading-tight sm:text-5xl">Designing inclusive, resilient digital products.</h1>
-          <p className="text-lg text-slate-300">
-            I partner with founders and product teams to translate complex problems into human-centered experiences,
-            balancing insight, craft, and technical fluency.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            <Link
-              href="#projects"
-              scroll
-              className="rounded-full bg-indigo-500 px-5 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-slate-50 shadow-lg shadow-indigo-500/40"
-            >
-              View selected work
-            </Link>
-            <Link
-              href="#contact"
-              scroll
-              className="rounded-full border border-slate-700 px-5 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-slate-200"
-            >
-              Let&rsquo;s collaborate
-            </Link>
+        <div className="space-y-5 md:w-2/3">
+          <p className="text-sm uppercase tracking-[0.3em] text-indigo-300">About</p>
+          <h1 id="about-heading" className="text-4xl font-semibold leading-tight sm:text-5xl">
+            {profile.name}
+          </h1>
+          <p className="text-lg text-slate-200">{profile.title}</p>
+          <p className="text-base leading-7 text-slate-300">{profile.about}</p>
+          <div className="flex flex-wrap gap-2 text-sm text-indigo-300">
+            <span className="rounded-full border border-indigo-500/40 px-3 py-1">{profile.location}</span>
+            <span className="rounded-full border border-indigo-500/40 px-3 py-1">Open to internships</span>
           </div>
         </div>
-        <div className="flex-1 rounded-3xl border border-slate-800 bg-slate-900/60 p-10 text-sm leading-7 text-slate-300 shadow-xl">
-          <p className="font-semibold uppercase tracking-[0.3em] text-indigo-300">Highlights</p>
-          <ul className="mt-6 space-y-4">
-            <li>
-              <strong className="text-white">8+ years</strong> supporting high-growth product teams
-            </li>
-            <li>
-              <strong className="text-white">Design systems</strong> that scale with velocity
-            </li>
-            <li>
-              <strong className="text-white">Accessibility</strong> woven into discovery, delivery, and QA
-            </li>
-          </ul>
+        <div className="flex flex-1 justify-center">
+          <div className="relative h-56 w-56 overflow-hidden rounded-3xl border border-slate-800 bg-slate-900/80 shadow-2xl shadow-indigo-900/40">
+            <Image src={profile.photo} alt={profile.name} fill className="object-cover" priority />
+          </div>
         </div>
       </div>
     </section>
