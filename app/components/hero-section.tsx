@@ -20,7 +20,7 @@ export default function HeroSection() {
               scroll
               className="rounded-full bg-indigo-500 px-5 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-slate-50 shadow-lg shadow-indigo-500/40"
             >
-              View selected work
+              View projects
             </Link>
             <Link
               href="#contact"
