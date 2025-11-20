@@ -31,7 +31,7 @@ export default function ProjectsSection() {
           <p className="text-sm uppercase tracking-[0.3em] text-indigo-300">Featured work</p>
           <h2 className="mt-2 text-3xl font-semibold">Recent projects</h2>
           <p className="mt-2 text-slate-300">
-            Filter by the product vertical to see engagements across SaaS, nonprofit, and consumer spaces.
+            Explore web, backend, and IoT work that shows how I connect the full stack from UI to deployment-ready services.
           </p>
         </header>
         <ProjectFilters value={filter} filters={filters} onChange={setFilter} />
