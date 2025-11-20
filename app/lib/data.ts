@@ -78,11 +78,11 @@ export const projects: Project[] = [
 ];
 
 export type Experience = {
-  id: string;
-  dates: string;
-  role: string;
-  organization: string;
-  summary: string;
+    id: string;
+    dates: string;
+    role: string;
+    organization: string;
+    summary: string;
 };
 
 export const experiences: Experience[] = [
