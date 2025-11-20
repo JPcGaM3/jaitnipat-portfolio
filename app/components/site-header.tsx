@@ -2,8 +2,11 @@ import Link from 'next/link';
 import ThemeToggle from './theme-toggle';
 
 const navigation = [
-  { href: '#projects', label: 'Projects' },
+  { href: '#about', label: 'About' },
   { href: '#experience', label: 'Experience' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#certificates', label: 'Certificates' },
+  { href: '#skills', label: 'Skills' },
   { href: '#contact', label: 'Contact' }
 ];
 
