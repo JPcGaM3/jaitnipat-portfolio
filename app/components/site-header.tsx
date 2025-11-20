@@ -16,7 +16,7 @@ export default function SiteHeader() {
           scroll
           className="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-300"
         >
-          Casey Parker
+          Portfolio
         </Link>
         <nav className="hidden gap-6 text-sm text-slate-300 md:flex">
           {navigation.map((item) => (

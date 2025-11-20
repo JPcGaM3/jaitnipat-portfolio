@@ -9,7 +9,7 @@ export default function LayoutShell({ children }: { children: ReactNode }) {
       <SiteHeader />
       <main>{children}</main>
       <footer className="border-t border-slate-800 bg-slate-900/50 py-6 text-center text-sm text-slate-400">
-        © {currentYear} Casey Parker. Crafted with empathy and utility.
+        © {currentYear} Portfolio. Powered by Next.js.
       </footer>
     </div>
   );

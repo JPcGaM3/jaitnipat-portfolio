@@ -18,7 +18,7 @@ export default function ProjectCard({ project }: { project: Project }) {
       </ul>
       {project.caseStudyUrl && (
         <Link href={project.caseStudyUrl} className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-indigo-300">
-          View case study <span aria-hidden="true">→</span>
+          More detail <span aria-hidden="true">→</span>
         </Link>
       )}
     </article>
