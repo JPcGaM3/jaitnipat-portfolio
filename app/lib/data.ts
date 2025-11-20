@@ -1,64 +1,86 @@
 export type Profile = {
-    name: string;
-    title: string;
-    location: string;
-    summary: string;
-    highlights: string[];
-    photo: string;
+  name: string;
+  title: string;
+  location: string;
+  summary: string;
+  highlights: string[];
+  photo: string;
 };
 
 export const profile: Profile = {
-    name: 'Jaitnipat Wichitniti',
-    title: 'Computer Engineering & Digital Technology Student',
-    location: 'Bangkok, Thailand',
-    summary:
-        'I enjoy building fast, intuitive web experiences and pairing them with reliable backend services that can scale.',
-    highlights: [
-        'Comfortable across the JavaScript/TypeScript stack with React, Next.js, and Node.js.',
-        'Hands-on with RESTful APIs, authentication, and database design for real-world projects.',
-        'Curious about cloud deployments, CI/CD, and automation to ship confidently.'
-    ],
-    photo: '/profile.svg'
+  name: 'Jaitnipat Wichitniti',
+  title: 'Computer Engineering Student & Full-stack Developer',
+  location: 'Bangkok, Thailand',
+  summary:
+    'I enjoy building fast, intuitive web experiences and pairing them with reliable backend services that can scale.',
+  highlights: [
+    'Comfortable across the JavaScript/TypeScript stack with React, Next.js, and Node.js.',
+    'Hands-on with RESTful APIs, authentication, and database design for real-world projects.',
+    'Curious about cloud deployments, CI/CD, and automation to ship confidently.'
+  ],
+  photo: '/profile.svg'
 };
 
 export type Project = {
-    id: string;
-    name: string;
-    description: string;
-    vertical: 'web' | 'backend' | 'iot';
-    year: number;
-    tags: string[];
-    caseStudyUrl?: string;
+  id: string;
+  name: string;
+  description: string;
+  vertical: 'web' | 'backend' | 'iot';
+  year: number;
+  tags: string[];
+  media?: {
+    type: 'image' | 'video';
+    src: string;
+    alt: string;
+  };
+  githubUrl?: string;
+  youtubeUrl?: string;
 };
 
 export const projects: Project[] = [
-    {
-        id: 'portfolio-refresh',
-        name: 'Personal Portfolio v2',
-        description: 'Next.js portfolio with dark-theme UI, project filters, and contact routing.',
-        vertical: 'web',
-        year: 2025,
-        tags: ['Next.js', 'TypeScript', 'Tailwind CSS'],
-        caseStudyUrl: '#contact'
+  {
+    id: 'portfolio-refresh',
+    name: 'Personal Portfolio v2',
+    description: 'Next.js portfolio with dark-theme UI, project filters, and in-page anchors for quick contact.',
+    vertical: 'web',
+    year: 2025,
+    tags: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+    media: {
+      type: 'image',
+      src: '/project-portfolio.svg',
+      alt: 'Preview of the dark-themed portfolio homepage'
     },
-    {
-        id: 'taskflow-api',
-        name: 'TaskFlow API',
-        description: 'Node.js and Express backend for a kanban-style task manager with JWT auth.',
-        vertical: 'backend',
-        year: 2024,
-        tags: ['Express', 'PostgreSQL', 'Authentication'],
-        caseStudyUrl: '#contact'
+    githubUrl: 'https://github.com/JPcGaM3/portfolio'
+  },
+  {
+    id: 'taskflow-api',
+    name: 'TaskFlow API',
+    description: 'Node.js and Express backend for a kanban-style task manager with JWT auth.',
+    vertical: 'backend',
+    year: 2024,
+    tags: ['Express', 'PostgreSQL', 'Authentication'],
+    media: {
+      type: 'image',
+      src: '/project-taskflow.svg',
+      alt: 'Dashboard diagram showing columns and API routes for TaskFlow'
     },
-    {
-        id: 'smart-garden',
-        name: 'Smart Garden Monitor',
-        description: 'Arduino-powered sensor network with a web dashboard for soil and humidity alerts.',
-        vertical: 'iot',
-        year: 2023,
-        tags: ['IoT', 'Dashboard', 'Real-time data'],
-        caseStudyUrl: '#contact'
-    }
+    githubUrl: 'https://github.com/JPcGaM3/taskflow-api'
+  },
+  {
+    id: 'smart-garden',
+    name: 'Smart Garden Monitor',
+    description: 'Arduino-powered sensor network with a web dashboard for soil and humidity alerts.',
+    vertical: 'iot',
+    year: 2023,
+    tags: ['IoT', 'Dashboard', 'Real-time data'],
+    media: {
+      type: 'image',
+      src: '/project-smart-garden.svg',
+      alt: 'Smart garden sensor node reporting soil and humidity data'
+    },
+    githubUrl: 'https://github.com/JPcGaM3/smart-garden-monitor',
+    youtubeUrl: 'https://youtube.com/watch?v=demo-smart-garden'
+  }
 ];
 
 export type Experience = {
