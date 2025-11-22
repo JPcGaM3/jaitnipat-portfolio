@@ -137,37 +137,37 @@ export const projects: Project[] = [
     },
     githubUrl: ["https://github.com/CBE-Technology-Team/cbe-website-2024"],
   },
-  // {
-  //   id: "automate-plant-farm-system-2024",
-  //   name: "Automate Plant Farm System",
-  //   description: [
-  //     "Developed a smart plant monitoring and automation system using an Arduino-based setup to promote healthy plant growth through automatic watering and pest detection",
-  //     "Integrated camera-based insect detection using YOLOv11, with instant alerts sent via LINE Notify",
-  //     "Built a real-time monitoring web application using Next.js and Flask, with data stored and synced via Firebase Realtime Database",
-  //   ],
-  //   vertical: "IoT",
-  //   year: 2024,
-  //   tags: [
-  //     "IoT",
-  //     "Arduino",
-  //     "YOLOv11",
-  //     "Next.js",
-  //     "TypeScript",
-  //     "Tailwind CSS",
-  //     "Fast-API",
-  //     "Firebase",
-  //   ],
-  //   media: {
-  //     type: "image",
-  //     src: "/project-smart-garden.svg",
-  //     alt: "Smart garden sensor node reporting soil and humidity data",
-  //   },
-  //   githubUrl: [
-  //     "https://github.com/JPcGaM3/Embedded-WebApp",
-  //     "https://github.com/punchpnp/Embeded-server",
-  //     "https://github.com/punchpnp/Embeded-client",
-  //   ],
-  // },
+  {
+    id: "automate-plant-farm-system-2024",
+    name: "Automate Plant Farm System",
+    description: [
+      "Developed a smart plant monitoring and automation system using an Arduino-based setup to promote healthy plant growth through automatic watering and pest detection",
+      "Integrated camera-based insect detection using YOLOv11, with instant alerts sent via LINE Notify",
+      "Built a real-time monitoring web application using Next.js and Flask, with data stored and synced via Firebase Realtime Database",
+    ],
+    vertical: "IoT",
+    year: 2024,
+    tags: [
+      "IoT",
+      "Arduino",
+      "YOLOv11",
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Fast-API",
+      "Firebase",
+    ],
+    media: {
+      type: "image",
+      src: "/project-smart-garden.svg",
+      alt: "Smart garden sensor node reporting soil and humidity data",
+    },
+    githubUrl: [
+      "https://github.com/JPcGaM3/Embedded-WebApp",
+      "https://github.com/punchpnp/Embeded-server",
+      "https://github.com/punchpnp/Embeded-client",
+    ],
+  },
 ];
 
 export type Certificate = {
