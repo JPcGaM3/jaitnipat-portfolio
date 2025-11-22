@@ -8,3 +8,4 @@ legacy/backend/target
 /frontend/.env
 /backend/.env
 **/*.log
+/.idea
