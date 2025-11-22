@@ -9,3 +9,4 @@ legacy/backend/target
 /backend/.env
 **/*.log
 /.idea
+bun.lock
