@@ -68,9 +68,9 @@ export type Project = {
         src: string;
         alt: string;
     };
-    githubUrl?: string;
-    youtubeUrl?: string;
-    linkUrl?: string;
+    githubUrl?: string[];
+    youtubeUrl?: string[];
+    linkUrl?: string[];
 };
 
 export const projects: Project[] = [
@@ -86,7 +86,7 @@ export const projects: Project[] = [
             src: '/project-portfolio.svg',
             alt: 'Preview of the dark-themed portfolio homepage'
         },
-        githubUrl: 'https://github.com/JPcGaM3/portfolio'
+        githubUrl: ['https://github.com/JPcGaM3/portfolio']
     },
     {
         id: 'cbe-line-shopping-2024',
@@ -103,8 +103,8 @@ export const projects: Project[] = [
             src: 'https://lh3.googleusercontent.com/d/14lDFw-dHnfcTAUcebLlTFEXNI6aNPraC',
             alt: 'Preview of cbe line shopping on instagram'
         },
-        githubUrl: 'https://github.com/CBE-Technology-Team/cbe-website-2024',
-        linkUrl: 'https://www.instagram.com/p/DF7jLCVSZL0/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
+        githubUrl: ['https://github.com/CBE-Technology-Team/cbe-website-2024'],
+        linkUrl: ['https://www.instagram.com/p/DF7jLCVSZL0/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==']
     },
     {
         id: 'cbe-website-2024',
@@ -121,7 +121,7 @@ export const projects: Project[] = [
             src: 'https://drive.google.com/file/d/1HDpvLMKO7x4AZUg0Idhh0WAWoPY6FPHR/view?usp=sharing',
             alt: 'Preview of cbe website'
         },
-        githubUrl: 'https://github.com/CBE-Technology-Team/cbe-website-2024'
+        githubUrl: ['https://github.com/CBE-Technology-Team/cbe-website-2024']
     },
     {
         id: 'automate-plant-farm-system-2024',
@@ -132,15 +132,18 @@ export const projects: Project[] = [
             'Built a real-time monitoring web application using Next.js and Flask, with data stored and synced via Firebase Realtime Database'
         ],
         vertical: 'IoT',
-        year: 2023,
-        tags: ['IoT', 'Dashboard', 'Real-time data'],
+        year: 2024,
+        tags: ['IoT', 'Arduino', 'YOLOv11', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Fast-API', 'Firebase'],
         media: {
             type: 'image',
             src: '/project-smart-garden.svg',
             alt: 'Smart garden sensor node reporting soil and humidity data'
         },
-        githubUrl: 'https://github.com/JPcGaM3/smart-garden-monitor',
-        youtubeUrl: 'https://youtube.com/watch?v=demo-smart-garden'
+        githubUrl: [
+            'https://github.com/JPcGaM3/Embedded-WebApp',
+            'https://github.com/punchpnp/Embeded-server',
+            'https://github.com/punchpnp/Embeded-client'
+        ],
     }
 ];
 
