@@ -1,9 +1,7 @@
-'use client';
-
 import { useMemo, useState } from 'react';
-import ProjectFilters from './project-filters';
-import ProjectCard from './project-card';
-import { projects } from '../lib/data';
+import { projects } from '../data';
+import ProjectCard from './ProjectCard';
+import ProjectFilters from './ProjectFilters';
 
 export default function ProjectsSection() {
   const [filter, setFilter] = useState('all');
@@ -26,7 +24,7 @@ export default function ProjectsSection() {
 
   return (
     <section id="projects" className="py-16">
-      <div className="mx-auto max-w-5xl space-y-8 px-6">
+      <div className="mx-auto max-w-6xl space-y-8 px-6">
         <header>
           <p className="text-sm uppercase tracking-[0.3em] text-indigo-300">Featured work</p>
           <h2 className="mt-2 text-3xl font-semibold">Recent projects</h2>

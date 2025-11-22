@@ -1,5 +1,4 @@
-import Image from 'next/image';
-import { profile } from '../lib/data';
+import { profile } from '../data';
 
 export default function HeroSection() {
   return (
@@ -8,7 +7,7 @@ export default function HeroSection() {
       className="border-b border-slate-800 bg-gradient-to-b from-slate-900/60 to-slate-950 py-20"
       aria-labelledby="about-heading"
     >
-      <div className="mx-auto flex max-w-5xl flex-col gap-10 px-6 md:flex-row md:items-center">
+      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 md:flex-row md:items-center">
         <div className="space-y-5 md:w-2/3">
           <h1 id="about-heading" className="text-4xl font-semibold leading-tight sm:text-5xl">
               {profile.name}
@@ -23,7 +22,7 @@ export default function HeroSection() {
         </div>
         <div className="flex flex-1 justify-center">
           <div className="relative h-56 w-56 overflow-hidden rounded-3xl border border-slate-800 bg-slate-900/80 shadow-2xl shadow-indigo-900/40">
-            <Image src={profile.photo} alt={profile.name} fill className="object-cover" priority />
+            <img src={profile.photo} alt={profile.name} className="h-full w-full object-cover" loading="lazy" />
           </div>
         </div>
       </div>

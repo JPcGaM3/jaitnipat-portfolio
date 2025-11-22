@@ -1,18 +1,18 @@
 export type Profile = {
-    name: string;
-    title: string;
-    location: string;
-    about: string;
-    photo: string;
+  name: string;
+  title: string;
+  location: string;
+  about: string;
+  photo: string;
 };
 
 export const profile: Profile = {
-    name: 'Jaitnipat Wichitniti',
-    title: 'Computer Engineering & Digital Technology Student',
-    location: 'Bangkok, Thailand',
-    about:
-        "Hello, I'm Game. I am deeply interested in the role developers play in shaping our world. My goal is to use technology to solve problems and create a better quality of life for others. I am a fast learner actively seeking a challenging role where I can contribute to innovative projects while developing my technical expertise.",
-    photo: '/profile.jpg'
+  name: 'Jaitnipat Wichitniti',
+  title: 'Computer Engineering & Digital Technology Student',
+  location: 'Bangkok, Thailand',
+  about:
+    "Hello, I'm Game. I am passionate about software development because I believe technology is the key to driving progress. I am dedicated to solving complex problems that improve quality of life and society. I am actively seeking opportunities to make a tangible impact in the tech industry and am eager to continuously learn and refine my skills.",
+  photo: '/profile.jpg'
 };
 
 export type Experience = {
@@ -74,20 +74,20 @@ export type Project = {
 };
 
 export const projects: Project[] = [
-    // {
-    //     id: 'portfolio',
-    //     name: 'Personal Portfolio',
-    //     description: ['Portfolio with dark-theme UI, project filters, and in-page anchors for quick contact.'],
-    //     vertical: 'Web',
-    //     year: 2025,
-    //     tags: ['Next.js', 'TypeScript', 'Tailwind CSS'],
-    //     media: {
-    //         type: 'image',
-    //         src: '/project-portfolio.svg',
-    //         alt: 'Preview of the dark-themed portfolio homepage'
-    //     },
-    //     githubUrl: 'https://github.com/JPcGaM3/portfolio'
-    // },
+    {
+        id: 'portfolio-refresh',
+        name: 'Personal Portfolio',
+        description: ['React + Vite portfolio with dark-theme UI, project filters, and PWA-ready navigation.'],
+        vertical: 'Web',
+        year: 2025,
+        tags: ['React', 'Vite', 'Tailwind CSS', 'PWA'],
+        media: {
+            type: 'image',
+            src: '/project-portfolio.svg',
+            alt: 'Preview of the dark-themed portfolio homepage'
+        },
+        githubUrl: 'https://github.com/JPcGaM3/portfolio'
+    },
     {
         id: 'cbe-line-shopping-2024',
         name: 'CBE Line Shopping',
@@ -162,7 +162,6 @@ export const certificates: Certificate[] = [
         title: 'Cloud Computing Operate and Manage a Cloud Server',
         issuer: 'Alibaba Cloud',
         year: 2025,
-        // credentialUrl: 'https://coursera.org/verify/ai-for-everyone',
         image: {
             src: '/Alibaba_Operate_and_Manage_a_Cloud_Server.jpg',
             alt: 'Alibaba Cloud Certification - Cloud Computing Operate and Manage a Cloud Server'
@@ -173,7 +172,6 @@ export const certificates: Certificate[] = [
         title: 'Alibaba Cloud Certified Associate Business User',
         issuer: 'Alibaba Cloud',
         year: 2025,
-        // credentialUrl: 'https://coursera.org/verify/ai-for-everyone',
         image: {
             src: '/Alibaba_ACA_Business_User_Certification_Exam.png',
             alt: 'Alibaba Cloud Certified Associate Business User'
@@ -184,7 +182,6 @@ export const certificates: Certificate[] = [
         title: 'The Second Runner-Up Award for AIIMZA Hackathon',
         issuer: 'AIIMZA & AMSA Thailand',
         year: 2025,
-        // credentialUrl: 'https://www.freecodecamp.org/certification/jaitnipat/responsive-web-design',
         image: {
             src: '/AIIMZA.jpg',
             alt: 'The Second Runner-Up Award for AIIMZA Hackathon 2025 | Building with AI: Shaping the Future of Healthcare with Technology'
@@ -262,4 +259,3 @@ export const skills: Skill[] = [
         items: ['Postman', 'Apidog', 'Figma', 'Photoshop', 'Premiere Pro']
     }
 ];
-

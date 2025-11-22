@@ -1,5 +1,3 @@
-'use client';
-
 import clsx from 'clsx';
 
 type FilterOption = {
@@ -22,7 +20,7 @@ export default function ProjectFilters({ value, filters, onChange }: ProjectFilt
           type="button"
           onClick={() => onChange(filter.value)}
           className={clsx(
-            'rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] transition-colors',
+            'rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-400',
             value === filter.value
               ? 'border-indigo-400 bg-indigo-500/20 text-indigo-200'
               : 'border-slate-700 bg-slate-900/60 text-slate-300 hover:border-slate-600'
