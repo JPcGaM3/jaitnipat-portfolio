@@ -158,8 +158,8 @@ export const projects: Project[] = [
       "Firebase",
     ],
     media: {
-      type: "image",
-      src: "/project-smart-garden.svg",
+      type: "video",
+      src: "https://drive.google.com/file/d/1GJxUCbXscvfk7jV3BkoURNlNkgdKZKYP/view?usp=sharing",
       alt: "Smart garden sensor node reporting soil and humidity data",
     },
     githubUrl: [
@@ -167,6 +167,7 @@ export const projects: Project[] = [
       "https://github.com/punchpnp/Embeded-server",
       "https://github.com/punchpnp/Embeded-client",
     ],
+    youtubeUrl: ["https://www.youtube.com/watch?v=iwpycA4UArE"],
   },
 ];
 
