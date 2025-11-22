@@ -12,7 +12,7 @@ export const profile: Profile = {
   location: 'Bangkok, Thailand',
   about:
     "Hello, I'm Game. I am passionate about software development because I believe technology is the key to driving progress. I am dedicated to solving complex problems that improve quality of life and society. I am actively seeking opportunities to make a tangible impact in the tech industry and am eager to continuously learn and refine my skills.",
-  photo: '/profile.jpg'
+  photo: 'https://lh3.googleusercontent.com/d/1BHmDfSJh6Rxb2LRpmnY-tEPnv85Sifxe'
 };
 
 export type Experience = {
@@ -100,7 +100,7 @@ export const projects: Project[] = [
         tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Echo', 'Go', 'PostgreSQL', 'Docker', 'Google Cloud'],
         media: {
             type: 'image',
-            src: '/cbe-line-shopping.png',
+            src: 'https://lh3.googleusercontent.com/d/14lDFw-dHnfcTAUcebLlTFEXNI6aNPraC',
             alt: 'Preview of cbe line shopping on instagram'
         },
         githubUrl: 'https://github.com/CBE-Technology-Team/cbe-website-2024',
@@ -118,7 +118,7 @@ export const projects: Project[] = [
         tags: ['Next.js', 'TypeScript', 'Tailwind CSS'],
         media: {
             type: 'video',
-            src: '/cbe-website.mov',
+            src: 'https://drive.google.com/file/d/1HDpvLMKO7x4AZUg0Idhh0WAWoPY6FPHR/view?usp=sharing',
             alt: 'Preview of cbe website'
         },
         githubUrl: 'https://github.com/CBE-Technology-Team/cbe-website-2024'
@@ -163,7 +163,7 @@ export const certificates: Certificate[] = [
         issuer: 'Alibaba Cloud',
         year: 2025,
         image: {
-            src: '/Alibaba_Operate_and_Manage_a_Cloud_Server.jpg',
+            src: 'https://lh3.googleusercontent.com/d/1LN6foiYJ-FhLdXrrwIGtKBs9b2B1AR9H',
             alt: 'Alibaba Cloud Certification - Cloud Computing Operate and Manage a Cloud Server'
         }
     },
@@ -173,7 +173,7 @@ export const certificates: Certificate[] = [
         issuer: 'Alibaba Cloud',
         year: 2025,
         image: {
-            src: '/Alibaba_ACA_Business_User_Certification_Exam.png',
+            src: 'https://lh3.googleusercontent.com/d/1K1dz3ejW6rdnceOl-zU7jsy2XFzu-nI-',
             alt: 'Alibaba Cloud Certified Associate Business User'
         }
     },
@@ -183,7 +183,7 @@ export const certificates: Certificate[] = [
         issuer: 'AIIMZA & AMSA Thailand',
         year: 2025,
         image: {
-            src: '/AIIMZA.jpg',
+            src: 'https://lh3.googleusercontent.com/d/1uiyJlVyqvGv4hRNBDsiUm7B4Rjugm_W1',
             alt: 'The Second Runner-Up Award for AIIMZA Hackathon 2025 | Building with AI: Shaping the Future of Healthcare with Technology'
         }
     },
@@ -193,7 +193,7 @@ export const certificates: Certificate[] = [
         issuer: 'Huawei Cloud',
         year: 2024,
         image: {
-            src: '/Huawei_HCCDA.jpg',
+            src: 'https://lh3.googleusercontent.com/d/1GDDPmPw30saPOUHa20jlbIyudrY25Vpz',
             alt: 'Huawei Cloud Certified - HCCDA-Tech Essentials certification'
         }
     }

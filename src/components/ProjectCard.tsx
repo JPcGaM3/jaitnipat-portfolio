@@ -16,14 +16,13 @@ export default function ProjectCard({ project }: { project: Project }) {
                                 loading="lazy"
                             />
                         ) : (
-                            <video
-                                src={project.media.src}
+                            <iframe
+                                src={getEmbedUrl(project.media.src)}
                                 title={project.media.alt}
-                                className="h-full w-full object-cover"
-                                muted
-                                loop
-                                playsInline
-                                controls
+                                className="h-full w-full border-0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                                loading="lazy"
                             />
                         )}
                     </div>
@@ -88,6 +87,15 @@ export default function ProjectCard({ project }: { project: Project }) {
         </article>
     );
 }
+
+// Helper function to convert video URLs to embed URLs
+const getEmbedUrl = (url: string) => {
+    // If it's a Google Drive link, change '/view' to '/preview'
+    if (url.includes('drive.google.com')) {
+        return url.replace('/view', '/preview');
+    }
+    return url;
+};
 
 // --- Icons ---
 
