@@ -4,8 +4,8 @@ import { defineConfig } from "vite";
 import { VitePWA } from "vite-plugin-pwa";
 
 // Avoid the rollup-terser crash on Node 23+ when Workbox bundles the service worker.
-const nodeMajorVersion = Number(process.versions.node.split(".")[0] ?? 0);
-const workboxMode = nodeMajorVersion >= 23 ? "development" : "production";
+// const nodeMajorVersion = Number(process.versions.node.split(".")[0] ?? 0);
+// const workboxMode = nodeMajorVersion >= 23 ? "development" : "production";
 
 export default defineConfig({
   base: "/jaitnipat-portfolio/",
@@ -34,7 +34,7 @@ export default defineConfig({
         ],
       },
       workbox: {
-        mode: workboxMode,
+        // mode: workboxMode,
         globPatterns: ["**/*.{js,css,html,svg,png,ico,webmanifest}"],
       },
     }),
