@@ -28,7 +28,8 @@ export default function SiteHeader() {
             </Link>
           ))}
         </nav>
-        <ThemeToggle />
+          <div></div>
+        {/*<ThemeToggle />*/}
       </div>
     </header>
   );

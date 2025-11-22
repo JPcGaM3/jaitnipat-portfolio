@@ -7,7 +7,7 @@ export default function SkillsSection() {
         <header className="space-y-2">
           <p className="text-sm uppercase tracking-[0.3em] text-indigo-300">Skills</p>
           <h2 className="text-3xl font-semibold text-white">Technologies I work with</h2>
-          <p className="text-slate-300">A mix of frontend, backend, and tooling that I use to ship full-stack products.</p>
+          {/*<p className="text-slate-300">A mix of frontend, backend, and tooling that I use to ship full-stack products.</p>*/}
         </header>
         <div className="grid gap-6 md:grid-cols-3">
           {skills.map((skill) => (

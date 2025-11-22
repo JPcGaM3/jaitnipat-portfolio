@@ -5,10 +5,10 @@ export default function ContactSection() {
         <div className="space-y-4 md:w-2/3">
           <p className="text-sm uppercase tracking-[0.3em] text-indigo-300">Contact</p>
           <h2 className="text-3xl font-semibold text-white">Ready to grow with your team.</h2>
-          <p>
-            I’m a 3rd-year Computer Engineering student seeking internship or startup opportunities where I can build, learn,
-            and move fast. If you need someone eager to prototype, connect APIs, and ship polished UI updates, let’s talk.
-          </p>
+          {/*<p>*/}
+          {/*  I’m a 3rd-year Computer Engineering student seeking internship or startup opportunities where I can build, learn,*/}
+          {/*  and move fast. If you need someone eager to prototype, connect APIs, and ship polished UI updates, let’s talk.*/}
+          {/*</p>*/}
         </div>
         <div className="flex-1 space-y-3 text-sm">
           <a href="mailto:jaitnipat.wc@gmail.com" className="block font-semibold text-indigo-300">
@@ -23,7 +23,7 @@ export default function ContactSection() {
           >
             linkedin.com/jaitnipat-wichitniti
           </a>
-          <p className="text-slate-400">Bangkok · UTC+7 · Open to remote or hybrid internships and early-stage teams</p>
+          {/*<p className="text-slate-400">Bangkok · UTC+7 · Open to remote or hybrid internships and early-stage teams</p>*/}
         </div>
       </div>
     </section>

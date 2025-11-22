@@ -10,11 +10,11 @@ export default function HeroSection() {
     >
       <div className="mx-auto flex max-w-5xl flex-col gap-10 px-6 md:flex-row md:items-center">
         <div className="space-y-5 md:w-2/3">
-          <p className="text-sm uppercase tracking-[0.3em] text-indigo-300">About</p>
           <h1 id="about-heading" className="text-4xl font-semibold leading-tight sm:text-5xl">
-            {profile.name}
+              {profile.name}
           </h1>
-          <p className="text-lg text-slate-200">{profile.title}</p>
+            <p className="text-lg text-slate-200">{profile.title}</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-indigo-300">About</p>
           <p className="text-base leading-7 text-slate-300">{profile.about}</p>
           <div className="flex flex-wrap gap-2 text-sm text-indigo-300">
             <span className="rounded-full border border-indigo-500/40 px-3 py-1">{profile.location}</span>

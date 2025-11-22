@@ -1,165 +1,265 @@
 export type Profile = {
-  name: string;
-  title: string;
-  location: string;
-  about: string;
-  photo: string;
+    name: string;
+    title: string;
+    location: string;
+    about: string;
+    photo: string;
 };
 
 export const profile: Profile = {
-  name: 'Jaitnipat Wichitniti',
-  title: 'Computer Engineering Student & Full-stack Developer',
-  location: 'Bangkok, Thailand',
-  about:
-    "Hello, I'm Yok. I am very interested in the work of a developer because this line of work is an important part of the development of technologies. Including helping to develop and solve various problems to make the quality of life and our world more progressive. I am actively seeking opportunities to make an impact in the evolving world of technology. I'm ready to learn new things and develop their skills to become even better in every aspect.",
-  photo: '/profile.svg'
+    name: 'Jaitnipat Wichitniti',
+    title: 'Computer Engineering & Digital Technology Student',
+    location: 'Bangkok, Thailand',
+    about:
+        "Hello, I'm Game. I am deeply interested in the role developers play in shaping our world. My goal is to use technology to solve problems and create a better quality of life for others. I am a fast learner actively seeking a challenging role where I can contribute to innovative projects while developing my technical expertise.",
+    photo: '/profile.jpg'
 };
-
-export type Project = {
-  id: string;
-  name: string;
-  description: string;
-  vertical: 'web' | 'backend' | 'iot';
-  year: number;
-  tags: string[];
-  media?: {
-    type: 'image' | 'video';
-    src: string;
-    alt: string;
-  };
-  githubUrl?: string;
-  youtubeUrl?: string;
-};
-
-export const projects: Project[] = [
-  {
-    id: 'portfolio-refresh',
-    name: 'Personal Portfolio v2',
-    description: 'Next.js portfolio with dark-theme UI, project filters, and in-page anchors for quick contact.',
-    vertical: 'web',
-    year: 2025,
-    tags: ['Next.js', 'TypeScript', 'Tailwind CSS'],
-    media: {
-      type: 'image',
-      src: '/project-portfolio.svg',
-      alt: 'Preview of the dark-themed portfolio homepage'
-    },
-    githubUrl: 'https://github.com/JPcGaM3/portfolio'
-  },
-  {
-    id: 'taskflow-api',
-    name: 'TaskFlow API',
-    description: 'Node.js and Express backend for a kanban-style task manager with JWT auth.',
-    vertical: 'backend',
-    year: 2024,
-    tags: ['Express', 'PostgreSQL', 'Authentication'],
-    media: {
-      type: 'image',
-      src: '/project-taskflow.svg',
-      alt: 'Dashboard diagram showing columns and API routes for TaskFlow'
-    },
-    githubUrl: 'https://github.com/JPcGaM3/taskflow-api'
-  },
-  {
-    id: 'smart-garden',
-    name: 'Smart Garden Monitor',
-    description: 'Arduino-powered sensor network with a web dashboard for soil and humidity alerts.',
-    vertical: 'iot',
-    year: 2023,
-    tags: ['IoT', 'Dashboard', 'Real-time data'],
-    media: {
-      type: 'image',
-      src: '/project-smart-garden.svg',
-      alt: 'Smart garden sensor node reporting soil and humidity data'
-    },
-    githubUrl: 'https://github.com/JPcGaM3/smart-garden-monitor',
-    youtubeUrl: 'https://youtube.com/watch?v=demo-smart-garden'
-  }
-];
 
 export type Experience = {
     id: string;
     dates: string;
     role: string;
     organization: string;
-    summary: string;
+    summary: string[];
 };
 
 export const experiences: Experience[] = [
-  {
-    id: 'internship',
-    dates: '2024 — Present',
-    role: 'Full-stack Developer Intern',
-    organization: 'Local product team',
-    summary:
-      'Built internal dashboards with Next.js and connected them to RESTful APIs, improving visibility for operations.'
-  },
-  {
-    id: 'capstone',
-    dates: '2023 — 2024',
-    role: 'Capstone Lead · Computer Engineering',
-    organization: 'Senior Project',
-    summary:
-      'Led a team to design and ship an IoT monitoring system, including firmware, data pipelines, and the user-facing UI.'
-  },
-  {
-    id: 'club',
-    dates: '2022 — 2023',
-    role: 'Developer · Programming Club',
-    organization: 'University',
-    summary:
-      'Organized coding workshops, mentored peers on Git workflows, and maintained shared template projects.'
-  }
+    {
+        id: 'Capstone_year3_2025',
+        dates: '2025 — Present',
+        role: 'Full-stack Developer (Capstone Project)',
+        organization: 'SCB Tech X Company Limited',
+        summary: [
+            "Designed and implemented the backend architecture for a banking-grade employee reward platform, from refining requirements with stakeholders to modelling database schema, workflows, and GraphQL APIs in Go.",
+            "Deployed and operated the system on Azure (Container Apps, PostgreSQL, Redis, Blob Storage), including environment setup and load testing with Postman to ensure reliable performance."
+        ]
+    },
+    {
+        id: 'internship_year2_2025',
+        dates: 'May 2025 — July 2025',
+        role: 'Full-stack Developer (Intern)',
+        organization: 'Mitr Phol Sugar Corporation Limited',
+        summary:[
+            'Developed the Agricultural Equipment Services web application using Next.js for resource management and work tracking across personnel, vehicles and tools',
+            'Built RESTful backend with Node.js and Express and designed a scalable PostgreSQL database schema to support operational reporting and future system growth'
+            ]
+    },
+    {
+        id: 'internship_year1_2024',
+        dates: 'May 2024 — July 2024',
+        role: 'Full-stack Mobile Application Developer (Intern)',
+        organization: 'FIN Insurance Broker Company Limited',
+        summary:[
+            'Developed the FIN Sales mobile application using React Native to drive sales growth and motivated internal teams by enabling consistent tracking and improvement of their sales performance through the app',
+            'Implemented MySQL database for efficient customer data management and sales progress tracking'
+            ]
+    },
 ];
 
-export type Skill = {
-  category: string;
-  items: string[];
+export type Project = {
+    id: string;
+    name: string;
+    description: string[];
+    vertical: 'Web' | 'IoT' | 'AI&ML';
+    year: number;
+    tags: string[];
+    media?: {
+        type: 'image' | 'video';
+        src: string;
+        alt: string;
+    };
+    githubUrl?: string;
+    youtubeUrl?: string;
+    linkUrl?: string;
 };
 
-export const skills: Skill[] = [
-  {
-    category: 'Languages & Frameworks',
-    items: ['JavaScript', 'TypeScript', 'React', 'Next.js']
-  },
-  {
-    category: 'Backend & Databases',
-    items: ['Node.js', 'Express', 'PostgreSQL', 'MongoDB']
-  },
-  {
-    category: 'Tools',
-    items: ['Git', 'Docker', 'Postman', 'Figma']
-  }
+export const projects: Project[] = [
+    // {
+    //     id: 'portfolio',
+    //     name: 'Personal Portfolio',
+    //     description: ['Portfolio with dark-theme UI, project filters, and in-page anchors for quick contact.'],
+    //     vertical: 'Web',
+    //     year: 2025,
+    //     tags: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+    //     media: {
+    //         type: 'image',
+    //         src: '/project-portfolio.svg',
+    //         alt: 'Preview of the dark-themed portfolio homepage'
+    //     },
+    //     githubUrl: 'https://github.com/JPcGaM3/portfolio'
+    // },
+    {
+        id: 'cbe-line-shopping-2024',
+        name: 'CBE Line Shopping',
+        description: [
+            'Built a LINE LIFF-integrated webview that streamlines the purchasing process and simplifies data management for users',
+            'Deployed using GitHub Actions with automated CI/CD to Google Cloud Platform, enabling scalable infrastructure and streamlined monitoring'
+        ],
+        vertical: 'Web',
+        year: 2025,
+        tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Echo', 'Go', 'PostgreSQL', 'Docker', 'Google Cloud'],
+        media: {
+            type: 'image',
+            src: '/cbe-line-shopping.png',
+            alt: 'Preview of cbe line shopping on instagram'
+        },
+        githubUrl: 'https://github.com/CBE-Technology-Team/cbe-website-2024',
+        linkUrl: 'https://www.instagram.com/p/DF7jLCVSZL0/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
+    },
+    {
+        id: 'cbe-website-2024',
+        name: 'CBE Website',
+        description: [
+            'Developed a company website to showcase business information and services using Next.js',
+            'Focused on component-based architecture and responsive layout'
+        ],
+        vertical: 'Web',
+        year: 2025,
+        tags: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+        media: {
+            type: 'video',
+            src: '/cbe-website.mov',
+            alt: 'Preview of cbe website'
+        },
+        githubUrl: 'https://github.com/CBE-Technology-Team/cbe-website-2024'
+    },
+    {
+        id: 'automate-plant-farm-system-2024',
+        name: 'Automate Plant Farm System',
+        description: [
+            'Developed a smart plant monitoring and automation system using an Arduino-based setup to promote healthy plant growth through automatic watering and pest detection',
+            'Integrated camera-based insect detection using YOLOv11, with instant alerts sent via LINE Notify',
+            'Built a real-time monitoring web application using Next.js and Flask, with data stored and synced via Firebase Realtime Database'
+        ],
+        vertical: 'IoT',
+        year: 2023,
+        tags: ['IoT', 'Dashboard', 'Real-time data'],
+        media: {
+            type: 'image',
+            src: '/project-smart-garden.svg',
+            alt: 'Smart garden sensor node reporting soil and humidity data'
+        },
+        githubUrl: 'https://github.com/JPcGaM3/smart-garden-monitor',
+        youtubeUrl: 'https://youtube.com/watch?v=demo-smart-garden'
+    }
 ];
 
 export type Certificate = {
-  id: string;
-  title: string;
-  issuer: string;
-  year: number;
-  credentialUrl?: string;
+    id: string;
+    title: string;
+    issuer: string;
+    year: number;
+    credentialUrl?: string;
+    image: {
+        src: string;
+        alt: string;
+    };
 };
 
 export const certificates: Certificate[] = [
-  {
-    id: 'cloud-essentials',
-    title: 'Cloud Practitioner Essentials',
-    issuer: 'AWS Academy',
-    year: 2024,
-    credentialUrl: 'https://www.credly.com/badges/aws-academy-cloud-practitioner-essentials'
-  },
-  {
-    id: 'responsive-web',
-    title: 'Responsive Web Design',
-    issuer: 'freeCodeCamp',
-    year: 2023,
-    credentialUrl: 'https://www.freecodecamp.org/certification/jaitnipat/responsive-web-design'
-  },
-  {
-    id: 'ai-fundamentals',
-    title: 'AI for Everyone',
-    issuer: 'Coursera · DeepLearning.AI',
-    year: 2022,
-    credentialUrl: 'https://coursera.org/verify/ai-for-everyone'
-  }
+    {
+        id: 'alibaba-operate-and-manage-cloud-server-2025',
+        title: 'Cloud Computing Operate and Manage a Cloud Server',
+        issuer: 'Alibaba Cloud',
+        year: 2025,
+        // credentialUrl: 'https://coursera.org/verify/ai-for-everyone',
+        image: {
+            src: '/Alibaba_Operate_and_Manage_a_Cloud_Server.jpg',
+            alt: 'Alibaba Cloud Certification - Cloud Computing Operate and Manage a Cloud Server'
+        }
+    },
+    {
+        id: 'alibaba-aca-business-user-cert-exam-2025',
+        title: 'Alibaba Cloud Certified Associate Business User',
+        issuer: 'Alibaba Cloud',
+        year: 2025,
+        // credentialUrl: 'https://coursera.org/verify/ai-for-everyone',
+        image: {
+            src: '/Alibaba_ACA_Business_User_Certification_Exam.png',
+            alt: 'Alibaba Cloud Certified Associate Business User'
+        }
+    },
+    {
+        id: 'team-aiimza-hackathon-2025',
+        title: 'The Second Runner-Up Award for AIIMZA Hackathon',
+        issuer: 'AIIMZA & AMSA Thailand',
+        year: 2025,
+        // credentialUrl: 'https://www.freecodecamp.org/certification/jaitnipat/responsive-web-design',
+        image: {
+            src: '/AIIMZA.jpg',
+            alt: 'The Second Runner-Up Award for AIIMZA Hackathon 2025 | Building with AI: Shaping the Future of Healthcare with Technology'
+        }
+    },
+    {
+        id: 'huawei-cloud-hccda-tech-essentials-2024',
+        title: 'HCCDA-Tech Essentials',
+        issuer: 'Huawei Cloud',
+        year: 2024,
+        image: {
+            src: '/Huawei_HCCDA.jpg',
+            alt: 'Huawei Cloud Certified - HCCDA-Tech Essentials certification'
+        }
+    }
 ];
+
+export type Skill = {
+    category: string;
+    items: string[];
+};
+
+export const skills: Skill[] = [
+    {
+        category: 'Programming Languages',
+        items: ['TypeScript', 'JavaScript', 'Go', 'Python', 'Cpp', 'C', 'Lua', 'Rust', 'Zig']
+    },
+    {
+        category: 'Frontend',
+        items: ['React', 'Next.js', 'React Native', 'Vite', 'Tailwind CSS']
+    },
+    {
+        category: 'Backend & APIs',
+        items: ['Go Fiber', 'Echo', 'Node.js', 'Express', 'GraphQL', 'REST APIs']
+    },
+    {
+        category: 'Databases & Caching',
+        items: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis']
+    },
+    {
+        category: 'AI & ML',
+        items: [
+            'Classical ML (regression, classification, clustering)',
+            'scikit-learn',
+            'XGBoost',
+            'Computer vision (OpenCV, MediaPipe, EasyOCR)'
+        ]
+    },
+    {
+        category: 'IoT & Messaging',
+        items: [
+            'MQTT',
+            'Kafka (event streaming basics)',
+            'Raspberry Pi',
+            'Arduino'
+        ]
+    },
+    {
+        category: 'DevOps & Cloud',
+        items: [
+            'Git',
+            'Docker',
+            'Kubernetes',
+            'Terraform',
+            'CI/CD (GitHub Actions)',
+            'AWS',
+            'Google Cloud',
+            'Azure',
+            'Huawei Cloud',
+            'Alibaba Cloud'
+        ]
+    },
+    {
+        category: 'Tools & Design',
+        items: ['Postman', 'Apidog', 'Figma', 'Photoshop', 'Premiere Pro']
+    }
+];
+
