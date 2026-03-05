@@ -10,3 +10,8 @@ legacy/backend/target
 **/*.log
 /.idea
 bun.lock
+
+/.agent/
+/.agents/
+/.claude/
+skills-lock.json
