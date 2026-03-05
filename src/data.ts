@@ -76,6 +76,22 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    id: "miss-thailand-voting-system",
+    name: "Miss Thailand Voting System",
+    description: [
+      "DevOps Engineer (ChulaTechSpark) | Miss Thailand 2026 Voting Platform",
+      "Engineered automated CI/CD pipelines using GitHub Actions to streamline serverless deployments to AWS Lambda for a high-traffic pageant voting system."
+    ],
+    vertical: "Web",
+    year: 2026,
+    tags: ["Next.js", "Python", "Opentofu", "GitHub Actions", "AWS Cloud"],
+    media: {
+      type: "image",
+      src: "https://lh3.googleusercontent.com/d/1D7tdT5HUVk7Z9abBbEMSWnBUYi1hkKGj",
+      alt: "Preview of miss thailand voting system",
+    },
+  },
+  {
     id: "portfolio-refresh",
     name: "Personal Portfolio",
     description: [
@@ -95,6 +111,7 @@ export const projects: Project[] = [
     id: "cbe-line-shopping-2024",
     name: "CBE Line Shopping",
     description: [
+      "Backend Developer & DevOps | CBE Line Shopping",
       "Built a LINE LIFF-integrated webview that streamlines the purchasing process and simplifies data management for users",
       "Deployed using GitHub Actions with automated CI/CD to Google Cloud Platform, enabling scalable infrastructure and streamlined monitoring",
     ],
@@ -124,6 +141,7 @@ export const projects: Project[] = [
     id: "cbe-website-2024",
     name: "CBE Website",
     description: [
+      "Full-stack Developer | CBE Website",
       "Developed a company website to showcase business information and services using Next.js",
       "Focused on component-based architecture and responsive layout",
     ],
