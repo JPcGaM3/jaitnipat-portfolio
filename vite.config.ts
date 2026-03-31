@@ -8,7 +8,7 @@ import { VitePWA } from "vite-plugin-pwa";
 // const workboxMode = nodeMajorVersion >= 23 ? "development" : "production";
 
 export default defineConfig({
-  base: "/jaitnipat-portfolio/",
+  base: "/",
   plugins: [
     tailwindcss(),
     react(),
@@ -23,8 +23,8 @@ export default defineConfig({
         theme_color: "#0f172a",
         background_color: "#020617",
         display: "standalone",
-        start_url: "/jaitnipat-portfolio/",
-        scope: "/jaitnipat-portfolio/",
+        start_url: "/",
+        scope: "/",
         icons: [
           {
             src: "favicon.svg",
