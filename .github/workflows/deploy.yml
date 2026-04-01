@@ -33,7 +33,7 @@ jobs:
         run: bun run build
       
       - name: Add CNAME
-        run: echo "jaitnipat.sleepy-eepy.dev" > ./dist/CNAME
+        run: echo "jaitnipat.naptime.dev" > ./dist/CNAME
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
